@@ -40,13 +40,13 @@ describe("check resolver main data", () => {
         expect(result.rottenTomatoes?.audience.rate).toBe(
           td.rottenTomatoes.audience.rate
         );
-        expect(result.rottenTomatoes?.audience.votesCount).toBe(
+        expect(result.rottenTomatoes?.audience.votesCount).toBeGreaterThanOrEqual(
           td.rottenTomatoes.audience.votesCount
         );
         expect(result.rottenTomatoes?.tomatometers.rate).toBe(
           td.rottenTomatoes.tomatometers.rate
         );
-        expect(result.rottenTomatoes?.tomatometers.votesCount).toBe(
+        expect(result.rottenTomatoes?.tomatometers.votesCount).toBeGreaterThanOrEqual(
           td.rottenTomatoes.tomatometers.votesCount
         );
       }
